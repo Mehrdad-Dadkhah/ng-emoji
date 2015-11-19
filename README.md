@@ -22,7 +22,7 @@ Table of Content:
 ```html
 <script src="../src/emojify/src/emojify.js" type="text/javascript"></script>
 <script src="../src/angular.min.js" type="text/javascript"></script>
-<script src="../src/emoji_directive.js" type="text/javascript"></script>
+<script src="../src/ngEmoji.js" type="text/javascript"></script>
 <script src="./demoApp.js" type="text/javascript"></script>
 ```
 
