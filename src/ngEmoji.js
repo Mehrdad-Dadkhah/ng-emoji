@@ -1,4 +1,4 @@
-var app = angular.module('directives' , []);
+var app = angular.module('ngEmoji' , []);
 
 var documentRoot = 'http://test.local/src/';
 
