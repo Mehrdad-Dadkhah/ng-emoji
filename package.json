@@ -1,0 +1,21 @@
+{
+    "name": "ng-emoji",
+    "version": "1.0.0",
+    "description": "An Angular directive for emojify complete panel",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Mehrdad-Dadkhah/ng-emoji"
+    },
+    "keywords": [
+        "emojify",
+        "input",
+        "emoticon",
+        "javascript"
+    ],
+    "author": "mehrdad@dadkhah.me",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Mehrdad-Dadkhah/ng-emoji/issues"
+    },
+    "homepage": "https://github.com/Mehrdad-Dadkhah/ng-emoji"
+}
