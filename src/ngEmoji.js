@@ -1,13 +1,10 @@
 var app = angular.module('ngEmoji' , []);
 
-var documentRoot = 'http://test.local/src/';
-
 app.directive('emoji', function() {
     return {
         templateUrl: documentRoot + 'emoji.html',
         restrict: 'E',
         scope:{
-            inputModel: '@',
             inputName: '@'
         },  
         compile: function($scope, element){
@@ -27,10 +24,8 @@ app.directive('emoji', function() {
             emojify.run();
             element.$$element[0].innerHTML = emojify.replace(element.$$element[0].innerHTML);
         },
-        controller: function($scope, $element){
+        controller: function($scope, $rootScope, $element){
             var init = function(){
-                $scope.$parent[$scope.inputName] = [];
-                $scope.$parent[$scope.inputName][$scope.inputModel] = '';
                 $scope.showEmojiPanel = false;
             }
 
@@ -39,8 +34,7 @@ app.directive('emoji', function() {
             }
 
             $scope.addEmoji = function(emojiCode){
-                var text = $scope.$parent[$scope.inputName][$scope.inputModel];
-                $scope.$parent[$scope.inputName][$scope.inputModel] = text+emojify.replace(emojiCode);
+                $rootScope.$broadcast('emji:addSuccess', emojify.replace(emojiCode), $scope.inputName);
             }
 
             init();

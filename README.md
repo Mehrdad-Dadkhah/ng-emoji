@@ -30,8 +30,18 @@ Table of Content:
 
 ```html
 <h2>input</h2>
-<input name="test[1]" ng-model="test[1]" value=""/>
+<input name="test" ng-model="test" value=""/>
 
 <h2>emoji panel</h2>
-<emoji input-model="1" input-name="test"></emoji>
+<emoji input-name="test"></emoji>
+```
+
+and in js code:
+
+```javascript
+$scope.$on('emji:addSuccess', function(event, emoji, inputName) {
+
+    $scope[inputName] += ' ' + emoji;
+    
+});
 ```
